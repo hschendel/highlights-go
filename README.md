@@ -18,5 +18,5 @@
 
 ## Tooling
 
-- go fmt
-- go vet
+- go fmt ./...
+- go vet ./...

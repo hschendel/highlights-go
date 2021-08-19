@@ -15,31 +15,31 @@ func Test_sortedPersonalDataRecordsBySurname_Less(t *testing.T) {
 	}{
 		{
 			name: "surname before",
-			s: sortedPersonalDataRecordsBySurname{{"A", "A"}, {"A", "B"}},
+			s:    sortedPersonalDataRecordsBySurname{{"A", "A"}, {"A", "B"}},
 			args: args{0, 1},
 			want: true,
 		},
 		{
 			name: "surname after",
-			s: sortedPersonalDataRecordsBySurname{{"A", "B"}, {"A", "A"}},
+			s:    sortedPersonalDataRecordsBySurname{{"A", "B"}, {"A", "A"}},
 			args: args{0, 1},
 			want: false,
 		},
 		{
 			name: "equal",
-			s: sortedPersonalDataRecordsBySurname{{"A", "A"}, {"A", "A"}},
+			s:    sortedPersonalDataRecordsBySurname{{"A", "A"}, {"A", "A"}},
 			args: args{0, 1},
 			want: false,
 		},
 		{
 			name: "surname equal, first name before",
-			s: sortedPersonalDataRecordsBySurname{{"A", "A"}, {"B", "A"}},
+			s:    sortedPersonalDataRecordsBySurname{{"A", "A"}, {"B", "A"}},
 			args: args{0, 1},
 			want: true,
 		},
 		{
 			name: "surname equal, first name after",
-			s: sortedPersonalDataRecordsBySurname{{"B", "A"}, {"A", "A"}},
+			s:    sortedPersonalDataRecordsBySurname{{"B", "A"}, {"A", "A"}},
 			args: args{0, 1},
 			want: false,
 		},

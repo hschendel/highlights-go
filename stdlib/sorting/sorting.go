@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	data := []personalDataRecord {
+	data := []personalDataRecord{
 		{"Hulk", "Hogan"},
 		{"Bret", "Hart"},
 		{"Tito", "Santana"},
@@ -22,7 +22,7 @@ func main() {
 
 type personalDataRecord struct {
 	FirstName string
-	Surname string
+	Surname   string
 }
 
 // sortedPersonalDataRecordsBySurname implements sort.Interface

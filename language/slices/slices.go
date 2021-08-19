@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	baseArray := [...]int{1,2,3} // array of length 3
+	baseArray := [...]int{1, 2, 3} // array of length 3
 	fmt.Printf("%#v\n\n", baseArray)
 
 	slice1 := baseArray[:]
