@@ -5,6 +5,7 @@
 - builtin container types:
   - slices
   - maps
+- by value vs. by reference
 - interfaces
 - composite types
 - concurrency
