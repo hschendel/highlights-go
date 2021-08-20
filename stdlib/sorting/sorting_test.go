@@ -2,6 +2,14 @@ package main
 
 import "testing"
 
+func BenchmarkSortedPersonalDataRecordsBySurname_Swap(b *testing.B) {
+	s := sortedPersonalDataRecordsBySurname{{"A", "A"}, {"A", "B"}}
+	for i := 0; i < b.N; i++ {
+		s.Swap(0, 1)
+		s.Swap(1, 0)
+	}
+}
+
 func Test_sortedPersonalDataRecordsBySurname_Less(t *testing.T) {
 	type args struct {
 		i int

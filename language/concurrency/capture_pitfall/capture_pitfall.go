@@ -12,7 +12,7 @@ func main() {
 	correct()
 }
 
-func wrong()  {
+func wrong() {
 	var wg sync.WaitGroup
 	wg.Add(10)
 	for i := 1; i <= 10; i++ {
@@ -25,7 +25,7 @@ func wrong()  {
 	wg.Wait() // if main() exits, the program exits, so we better wait!
 }
 
-func correct()  {
+func correct() {
 	var wg sync.WaitGroup
 	wg.Add(10)
 	for i := 1; i <= 10; i++ {
@@ -37,4 +37,3 @@ func correct()  {
 	}
 	wg.Wait()
 }
-

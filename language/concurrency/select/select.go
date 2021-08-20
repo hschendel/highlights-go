@@ -43,13 +43,13 @@ func consumer(ch, factorCh <-chan int) {
 	factor := 1
 	for {
 		select {
-		case k, ok := <- ch:
+		case k, ok := <-ch:
 			if !ok {
 				// ch is closed
 				return
 			}
 			fmt.Println(factor * k)
-		case newFactor := <- factorCh:
+		case newFactor := <-factorCh:
 			factor = newFactor
 		}
 	}

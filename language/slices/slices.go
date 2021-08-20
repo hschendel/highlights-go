@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 	baseArray := [...]int{1, 2, 3} // array of length 3
@@ -9,6 +12,12 @@ func main() {
 	slice1 := baseArray[:]
 	fmt.Printf("%#v\n", slice1)
 	fmt.Printf("slice1 len: %d\ncap: %d\n\n", len(slice1), cap(slice1))
+
+	if str, err := getFromSlice(slice1, 3); err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(str)
+	}
 
 	slice2 := append(slice1, 4, 5)
 	fmt.Printf("slice1 = %#v\nslice2 = %#v\n\n", slice1, slice2)
@@ -27,4 +36,13 @@ func main() {
 	fmt.Printf("slice3 = %#v\n", slice3)
 	fmt.Printf("slice4 = %#v !!!\n", slice4)
 	fmt.Printf("slice5 = %#v\n\n", slice5)
+}
+
+func getFromSlice(s []int, index int) (i int, err error) {
+	if index < len(s) {
+		i = s[index]
+		return
+	}
+	err = errors.New("you did something stupid")
+	return
 }

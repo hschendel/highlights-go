@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var s SomeStruct
@@ -17,6 +19,10 @@ func main() {
 
 	s.setB("new")
 	s.println()
+}
+
+type BSetter interface {
+	setB(b string)
 }
 
 type SomeStruct struct {

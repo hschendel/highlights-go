@@ -37,6 +37,8 @@
 
 ## Tooling
 
+- go test
+- go test -bench=.
 - go fmt ./...
 - go vet ./...
 
