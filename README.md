@@ -2,6 +2,12 @@
 
 ## Why Go?
 
+- Simple without too many concepts
+- Compiles fast: easier to go to from an interpreted language, good for short dev cycles
+- Built for big systems
+- Built to scale
+- Built by old folk annoyed by C++ for old folk annoyed by hipster languages ;)
+
 ## First Steps
 
 - Getting started: https://golang.org/doc/tutorial/getting-started
