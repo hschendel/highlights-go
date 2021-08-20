@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Time</title>
+</head>
+<body>
+<h1>Local Time for Location</h1>
+<form method="GET">
+    <div>
+        <label for="location">Time Zone Location</label>
+        <input id="location" name="location" type="text" size="30" value="{{.Location}}">
+    </div>
+    {{if (ne .LocationError "")}}
+    <div>
+        Location is missing or wrong
+    </div>
+    {{end}}
+    <div>
+        <button type="submit">Get Time!</button>
+    </div>
+    {{if .HasOutput}}
+    <div>
+        UTC: {{.TimeUTC}}
+    </div>
+    <div>
+        Local Time in {{.Location}}: {{.TimeLocal}}
+    </div>
+    {{end}}
+</form>
+</body>
+</html>
